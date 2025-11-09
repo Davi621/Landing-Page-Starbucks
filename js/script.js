@@ -1,0 +1,9 @@
+const mobileBtn = document.querySelector('.btn-mobile');
+const navLinks = document.getElementById('nav-Links');
+const icon = document.querySelector('.btn-mobile i');
+
+mobileBtn.addEventListener('click', () => {
+    navlinks.classList.toggle('show');
+    icon.classList.toggle('fa-times');
+    icon.classList.toggle('fa-bars');
+})
