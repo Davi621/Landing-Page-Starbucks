@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @import url('../css/variables.css');
+@import url('../css/navbar.css');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif;
+}
+
+#container {
+    background-image: url('../images/background-mobile.png');
+    background-size: contain;
 }
 
 a.btn {
@@ -36,83 +41,54 @@ a.btn {
     &:hover {
         background-color: var(--color-primary-2);
     }
-
 }
-header {
-    background-color: var(--color-neutral-1);
-    padding: 12px 4%;
-    position: sticky;
-    top: 0;
-    z-index: 1;
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.btn-outlined {
+    background-color: transparent;
+    color: var(--color-primary-1);
+    border: 2px solid var(--color-primary-1);
 
-        .logo {
-            width: 180px;
-        }
-
-        ul {
-            display: none;
-            list-style: none;
-            flex-direction: column;
-            gap: 0.5rem;
-            width: 100%;
-            position: absolute;
-            top: 80px;
-            background-color: var(--color-neutral-1);
-            left:0;
-
-            &.show {
-                display: flex;
-            }
-            
-            li {
-                text-align: center;
-            }
-
-            a {
-                color: var(--color-neutral-8);
-                text-decoration: none;
-                font-size: 1rem;
-                font-weight: 500;
-                transition: all 0.3s ease;
-
-                &:hover {
-                    color: var(--color-neutral-1);
-                    border-bottom: 1px solid var(--color-neutral-1);
-                }
-            }
-
-        }
-
-        .btn-default {
-            display: none;
-        }
+    &:hover {
+        background-color: var(--color-primary-2);
+        color: var(--color-neutral-0);
     }
 }
 
-@media(min-width: 769px) {
-    header {
-        .navbar {
-            .btn-mobile {
-                display: none;
-            }
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding-top: clamp(0px, 5vw, 32px);
 
-            ul {
-                display: flex;
-                flex-direction: row;
-                position: static;
-                gap: 1rem;
-                width: auto;
-                padding: 0;
-            }
+    .home-image {
+        width: clamp(300px, 50%, 400px);
+    }
 
-            .btn-default {
-                display: block;
-            }
+    .home-title {
+        color: var(--color-neutral-8);
+        text-align: center;
+        font-size: clamp(3rem, 5vw, 4.3rem);
+        line-height: 1.2;
+        max-width: 700px;
+
+        span {
+            color: var(--color-primary-1);
         }
+    }
+
+    .home-description {
+        color: var(--color-neutral-0);
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 600px;
+    }
+
+    .home-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
     }
 }
