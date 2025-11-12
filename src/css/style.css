@@ -211,7 +211,7 @@ a.btn {
         }
 
         p {
-            color: var(--color-secondary-1);
+            color: var(--color-secondary-0);
             font-size: 1rem;
 
             span {
@@ -220,10 +220,25 @@ a.btn {
             }
         }
 
+        p {
+            color: var(--color-neutral-0);
+            font-size: 1rem;
+
+            span {
+                color: var(--color-secondary-1);
+                font-weight: 500;
+            }
+        }
     }
 }
 
 @media (min-width: 768px) {
+    #container {
+        background-image: url(../images/background-desktop.png);
+        background-size: cover;
+        background-position: start;
+        background-repeat: no-repeat;
+    }
     #trending {
         .trending-card {
             display: flex;
@@ -239,7 +254,7 @@ a.btn {
         margin: 4%;
         justify-content: center;
 
-        .about-cotent {
+        .about-content {
             flex-direction: row;
             align-items: center;
             gap: 48px;
