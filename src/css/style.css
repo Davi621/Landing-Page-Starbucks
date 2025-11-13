@@ -176,6 +176,29 @@ a.btn {
     border-radius: 32px;
 }
 
+#products {
+    padding: 48px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 58px;
+
+    .products-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary-1);
+        background-image: url('../images/products/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 16;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
 .title {
     color: var(--color-neutral-0);
 
