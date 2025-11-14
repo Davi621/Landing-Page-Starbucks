@@ -10,5 +10,9 @@ mobileBtn.addEventListener('click', () => {
 
 window.addEventListener('scroll' , () => {
     const navbar = document.getElementById('header');
-
+    if (window.scrollY > 0) {
+        Headers.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
+    } else {
+       header.style.boxShadow = 'none';
+    }
 })
